@@ -9,6 +9,7 @@
   </head>
   <body>
     <!-- https://themewagon.github.io/Kelly/about.html -->
+     <!-- https://themewagon.github.io/iPortfolio/ -->
     <!-- navigation link -->
     <div class="container mx-auto mt-5 ">
       <nav class=" flex   items-center">
@@ -160,6 +161,184 @@
         <div class="text-center  my-18">
             <h2 class="text-5xl text-center text-light-grey my-4 ">Skills</h2>
         </div>
+        <div class="flex flex-col lg:flex-row items-center mt-10 gap-35">
+            <div class="w-full lg:w-1/2 justify-center px-5 lg:pl-12">
+
+                <!-- skill-1 -->
+                 <h4 class="font-light">HTML5</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2  mb-3">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2"></div>
+                 </div>                
+                 <h4 class="font-light">JS</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
+                 </div>
+                 <h4 class="font-light mt-3">SQL</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
+                 </div>           
+            </div>
+
+            <div class="w-full lg:w-1/2 px-5 justify-center lg:pr-12">
+                <!-- skill-1 -->
+                 <h4 class="font-light mt-3">CSS3</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-5"></div>
+                 </div>
+
+                 <h4 class="font-light mt-3">Tailwind CSS</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2 "></div>
+                 </div>
+
+                 <h4 class="font-light mt-3">Version Control</h4>
+                 <div class="w-full bg-gray-400 rounded-full h-2">
+                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
+                 </div>
+           
+            </div>
+        </div>
+     </div>
+
+
+      <!-- Portfolio -->
+      <div class="conatiner mx-auto mt-5" id="skills">
+        <div class="text-center  my-18">
+            <h2 class="text-5xl text-center text-light-grey my-4 ">Portfolio</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center mt-10 gap-10">
+            <ul class="flex flex-row gap-5 items-center mx-auto font-medium" id="filterButtons">
+                <!-- <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="all">All</li> -->
+                <!-- <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="php">PHP</li> -->
+                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="laravel">Laravel</li>
+                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="codeigniter">CodeIgniter</li>
+                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="frontend">Frontend</li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap lg:flex-row gap-5 ml-15 mt-8" id="portfolioItems">
+            <div class="flex flex-col lg:flex-row gap-5">
+                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
+                    <div class="flex flex-col lg:flex-row items-center ">
+                    <a href="https://github.com/nethmi2020/my_portfolio">
+                        <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                            <img src="images/MOL.png" class="mb-2" alt="">
+                            portfolio
+                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                                portfolio
+                                <span class="font-thin mt-2 text-base text-center mx-2">portfolio </span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>          
+                  </div>
+
+              <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
+                <div class="flex flex-col lg:flex-row items-center ">
+                <a href="https://github.com/nethmi2020/my_portfolio">
+                    <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                        <img src="images/MOL.png" class="mb-2" alt="">
+                        MOL Logistic System
+                        <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                            MOL Logistic Syste
+                            <span class="font-thin mt-2 text-base text-center mx-2">MOL Logistic System </span>
+                        </p>
+                    </div>
+                </a>
+                </div>          
+              </div>
+
+              <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
+                <div class="flex flex-col lg:flex-row items-center ">
+                <a href="https://github.com/nethmi2020/my_portfolio">
+                    <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                        <img src="images/customer-billing.png" class="mb-2" alt="">
+                        Customer Billing Portal
+                        <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                            Customer Billing Portal
+                            <span class="font-thin mt-2 text-base text-center mx-2">Customer Billing Portal</span>
+                        </p>
+                    </div>
+                </a>
+                </div>          
+              </div>
+
+            </div>
+             
+            <div class="flex flex-col lg:flex-row gap-5">
+                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
+                    <div class="flex flex-col lg:flex-row items-center ">
+                    <a href="https://github.com/nethmi2020/my_portfolio">
+                        <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                            <img src="images/nethmi-animated.png" class="mb-2" alt="">
+                            Tailwind CSS Portfolio
+                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                                Tailwind CSS Portfolio
+                                <span class="font-thin mt-2 text-base text-center mx-2">Tailwind CSS Portfolio</span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>          
+                 </div>
+
+                 <div class="transition-all duration-500 opacity-100 project_category" data-category="frontend">
+                    <div class="flex flex-col lg:flex-row items-center ">
+                    <a href="https://github.com/nethmi2020/my_portfolio">
+                        <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                            <img src="images/videoframe_5035.png" class="mb-2" alt="">
+                            YouTube Landing Page
+                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                                YouTube Landing Page
+                                <span class="font-thin mt-2 text-base text-center mx-2">YouTube Landing Page</span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>          
+                 </div>
+
+                 <div class="transition-all duration-500 opacity-100 project_category" data-category="frontend">
+                    <div class="flex flex-col lg:flex-row items-center ">
+                    <a href="https://github.com/nethmi2020/my_portfolio">
+                        <div class= " relative  w-1/2   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
+                            <img src="images/ecommerce.png" class="mb-2" alt="">
+                            E commerce Site
+                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
+                               Multi Vendor  commerce site
+                                <span class="font-thin mt-2 text-base text-center mx-2">E commerce Site</span>
+                            </p>
+                        </div>
+                    </a>
+                    </div>          
+                 </div>
+            </div>
+            
+        </div>
      </div>
   </body>
+  <script>
+    const filterButtons=document.querySelectorAll('#filterButtons li');
+    const portfolioItems=document.querySelectorAll('#portfolioItems .project_category');
+
+    filterButtons.forEach(button=>{
+        button.addEventListener('click',()=>{
+            const filter=button.getAttribute('data-filter');
+
+            filterButtons.forEach(btn=>btn.classList.remove('text-green-400','font-bold'))
+
+            button.classList.add('text-green-400','font-bold')
+
+            portfolioItems.forEach(item =>{
+                const itemCategory=item.getAttribute('data-category');
+
+           
+                
+                if(filter==='all' || filter===itemCategory){
+                    item.classList.remove('hidden');
+                }
+                else{
+                    item.classList.add('hidden');
+                }
+            })
+        })
+    })
+  </script>
 </html>
