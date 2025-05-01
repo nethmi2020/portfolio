@@ -7,24 +7,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
+
   <body>
     <!-- https://themewagon.github.io/Kelly/about.html -->
      <!-- https://themewagon.github.io/iPortfolio/ -->
     <!-- navigation link -->
-    <div class="container mx-auto mt-5 ">
+    <div id="navbar" class=" fixed p-3 top-0 w-full bg-white z-50 shadow ">
       <nav class=" flex   items-center">
         <ul class="flex flex-1  justify-center space-x-5 ">
           <li><a href="#home" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Home</a></li>
-          <li><a href="#about1" class="font-medium  hover:text-green-300 ">About</a></li>
-          <li><a href="#qualification" class="font-medium hover:text-green-300  ">Qualification</a></li>
-          <li><a href="#skill" class="font-medium hover:text-green-300 ">Skill</a></li>
-          <li><a href="#portfolio" class="font-medium hover:text-green-300 ">Portfolio</a></li>
-          <li><a href="#contact" class="font-medium hover:text-green-300 ">Contact</a></li>
+          <li><a href="#about" class="font-medium  hover:text-green-300 transition duration-300 ease-in-out">About</a></li>
+          <li><a href="#qualification" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Qualification</a></li>
+          <li><a href="#skills" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Skill</a></li>
+          <li><a href="#portfolio" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Portfolio</a></li>
+          <li><a href="#contact" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Contact</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="container mx-auto my-5">
+    <div class="container mx-auto my-5 pt-24" id="home">
         <div class=" flex justify-center">
             <img class=" max-w-full h-auto rounded-full " src="images/nethmi.jpg" alt=""> 
         </div>
@@ -42,7 +43,7 @@
     </div>
     <!-- about -->
    
-        <div class="container mx-auto mt-5 " id="about22">
+        <div class="container mx-auto mt-5 " id="about">
             <div class="text-center  my-18">
                 <h2 class="text-5xl text-center text-light-grey my-4 ">About Me</h2>
                 <p class="text-center max-w-2xl mx-auto font-light">Software developer with over <span class="font-medium">four + year</span> of experience who is passionate about building scalable online applications. 
@@ -427,5 +428,45 @@
             })
         })
     })
+
+  // add shadow to navbar when scrolling
+    window.addEventListener('scroll', function () 
+        {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow-lg', 'bg-white');
+        } else {
+            navbar.classList.remove('shadow-md');
+        }
+        });
+
+    //make cliked nav link active
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("div[id]"); 
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("id");
+          const link = document.querySelector(`nav ul li a[href="#${id}"]`);
+
+          if (entry.isIntersecting) {
+            navLinks.forEach((el) => el.classList.remove("text-green-500"));
+            if (link) link.classList.add("text-green-500");
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+
+
   </script>
 </html>
