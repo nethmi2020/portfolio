@@ -14,7 +14,13 @@
     <!-- navigation link -->
     <div id="navbar" class=" fixed p-3 top-0 w-full bg-white z-50 shadow ">
       <nav class=" flex   items-center">
-        <ul class="flex flex-1  justify-center space-x-5 ">
+
+          <!-- Hamburger icon for mobile -->
+            <!-- <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button> -->
+
+        <ul  id="nav-links" class="flex flex-1  justify-center space-x-5 ">
           <li><a href="#home" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Home</a></li>
           <li><a href="#about" class="font-medium  hover:text-green-300 transition duration-300 ease-in-out">About</a></li>
           <li><a href="#qualification" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Qualification</a></li>
@@ -43,7 +49,7 @@
     </div>
     <!-- about -->
    
-        <div class="container mx-auto mt-5 " id="about">
+        <div class="container mx-auto mt-5   " id="about">
             <div class="text-center  my-18">
                 <h2 class="text-5xl text-center text-light-grey my-4 ">About Me</h2>
                 <p class="text-center max-w-2xl mx-auto font-light">Software developer with over <span class="font-medium">four + year</span> of experience who is passionate about building scalable online applications. 
@@ -81,7 +87,7 @@
    
    <!-- qualiffications -->
 
-    <div class="container mx-auto mt-5 " id="qualification">
+    <div class="container mx-auto mt-5  " id="qualification">
     <div class="text-center  my-18">
         <h2 class="text-5xl text-center text-light-grey my-4 ">Education And Experience</h2>
     </div>
@@ -158,7 +164,7 @@
     </div>
 
     <!-- skills -->
-     <div class="conatiner mx-auto mt-5" id="skills">
+     <div class="conatiner mx-auto mt-5 " id="skills">
         <div class="text-center  my-18">
             <h2 class="text-5xl text-center text-light-grey my-4 ">Skills</h2>
         </div>
@@ -204,7 +210,7 @@
 
       <!-- Portfolio -->
       <div class="conatiner mx-auto mt-5" id="portfolio">
-        <div class="text-center  my-18">
+        <div class="text-center ">
             <h2 class="text-5xl text-center text-light-grey my-4 ">Portfolio</h2>
         </div>
         <div class="flex flex-col lg:flex-row items-center mt-10 gap-10">
@@ -332,7 +338,7 @@
      </div>
 
      <!-- contacts -->
-      <div class="container mx-auto my-5" id="contact">
+      <div class="container mx-auto my-5 " id="contact">
         <div class="text-center  my-18">
             <h2 class="text-5xl text-center text-light-grey my-4 ">Contact Us</h2>
         </div>
@@ -400,6 +406,21 @@
         </div>
 
       </div>
+
+    <!-- footer -->
+     <div  class="container mx-auto mt-15 bg-blue-100 p-10" >
+        <p class="text-center text-sm my-8 text-gray-600"> &copy; 2025 Nethmi Welgamvila. All rights reserved.</p>
+        <ul class="flex flex-row gap-8 justify-center">
+            <li><a href="https://github.com/nethmi2020" class="font-medium  hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/nethmi96/" class="font-medium hover:text-green-300  text-3xl  transition ease-in-out"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://codepen.io/nethmicode2020" class="font-medium hover:text-green-300   text-3xl transition ease-in-out"><i class="fa-brands fa-codepen"></i></a></li>
+            <li><a href="https://medium.com/@nethmiwelgamvila" class="font-medium hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-brands fa-medium"></i></a></li>
+            <li><a href="tel:+94716897175" class="font-medium hover:text-green-300 text-3xl transition ease-in-out"><i class="fa-solid fa-phone"></i></a></li>
+            <li><a href="mailto:nethmiwelgamvila@gmail.com" class="font-medium hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+        <p class="text-center my-8 text-sm text-gray-600">
+            Designed & developed with 💻 by Nethmi Welgamvila
+          </p>
      </div>
   </body>
   <script>
@@ -467,6 +488,9 @@
     });
   });
 
-
+//   document.getElementById("menu-toggle").addEventListener("click", function () {
+//     const navLinks = document.getElementById("nav-links");
+//     navLinks.classList.toggle("hidden");
+//   });
   </script>
 </html>
