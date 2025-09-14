@@ -1,501 +1,910 @@
-<!DOCTYPE html >
-<html lang="en"  class="scroll-smooth">
-  <head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
+<style>
+    .scroll-animate {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease-out;
+    }
 
-<body style="font-family: 'Poppins', sans-serif;">
+    .scroll-animate.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<body style="font-family: 'Poppins', sans-serif">
     <!-- https://themewagon.github.io/Kelly/about.html -->
-     <!-- https://themewagon.github.io/iPortfolio/ -->
+    <!-- https://themewagon.github.io/iPortfolio/ -->
     <!-- navigation link -->
-    <div id="navbar" class=" fixed p-3 top-0 w-full bg-white z-50 shadow ">
-      <nav class=" flex   items-center">
-
-          <!-- Hamburger icon for mobile -->
+    <div id="navbar" class="fixed p-3 top-0 w-full bg-white z-50 shadow">
+        <nav class="flex items-center">
+            <!-- Hamburger icon for mobile -->
             <!-- <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button> -->
 
-        <ul  id="nav-links" class="flex flex-1  justify-center space-x-5 ">
-          <li><a href="#home" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Home</a></li>
-          <li><a href="#about" class="font-medium  hover:text-green-300 transition duration-300 ease-in-out">About</a></li>
-          <li><a href="#qualification" class="font-medium hover:text-green-300  transition duration-300 ease-in-out">Qualification</a></li>
-          <li><a href="#skills" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Skill</a></li>
-          <li><a href="#portfolio" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Portfolio</a></li>
-          <li><a href="#contact" class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Contact</a></li>
-        </ul>
-      </nav>
+            <ul id="nav-links" class="flex flex-1 justify-center space-x-5">
+                <li>
+                    <a href="#home"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Home</a>
+                </li>
+                <li>
+                    <a href="#about"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">About</a>
+                </li>
+                <li>
+                    <a href="#qualification"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Qualification</a>
+                </li>
+                <li>
+                    <a href="#skills"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Skill</a>
+                </li>
+                <li>
+                    <a href="#portfolio"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="font-medium hover:text-green-300 transition duration-300 ease-in-out">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
-    <div class="container mx-auto my-5 pt-24 " id="home">
-        <div class=" flex justify-center">
-            <img class=" max-w-full h-auto rounded-full h-100 w-100  border-2 border-transparent   hover:border-4 hover:border-green-500 " src="images/nethmi-cropped.jpg" alt=""> 
+    <div class="container mx-auto my-16 pt-24 text-center" id="home">
+        <!-- Profile Image -->
+        <div class="flex justify-center">
+            <div class="relative">
+                <img class="w-44 h-44 sm:w-56 sm:h-56 object-contain rounded-full shadow-xl border-4 border-teal-500 bg-white p-1 hover:scale-105 transition-transform duration-500 ease-in-out"
+                    src="images/nethmi-cropped.jpg" alt="Nethmi Welgamvila" />
+
+                <!-- Decorative ring effect -->
+                <span class="absolute inset-0 rounded-full border-2 border-teal-300 animate-pulse"></span>
+            </div>
         </div>
-        <p class="text-center py-4 text-1xl"><span><b>Hi,</b></span>I'm Nethmi Welgamvila</p>
-        <div class="flex mt-15">
-            <ul class=" flex flex-1   justify-center space-x-10 text-2xl ">
-                <li><a href="https://github.com/nethmi2020" class="font-medium   text-2xl hover:text-green-300  transition transform hover:scale-125 ease-in-out duration-300 "><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/nethmi96/" class="font-medium text-2xl hover:text-green-300   transition transform hover:scale-125  ease-in-out"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://codepen.io/nethmicode2020" class="font-medium text-2xl hover:text-green-300   transition transform hover:scale-125  ease-in-out"><i class="fa-brands fa-codepen"></i></a></li>
-                <li><a href="https://medium.com/@nethmiwelgamvila" class="font-medium text-2xl hover:text-green-300   transition transform hover:scale-125  ease-in-out"><i class="fa-brands fa-medium"></i></a></li>
-                <li><a href="tel:+94716897175" class="font-medium text-2xl hover:text-green-300   transition transform hover:scale-125  ease-in-out"><i class="fa-solid fa-phone"></i></a></li>
-                <li><a href="mailto:nethmiwelgamvila@gmail.com" class="font-medium text-2xl hover:text-green-300   transition transform hover:scale-125  ease-in-out"><i class="fa-solid fa-envelope"></i></a></li>
+
+        <!-- Intro Text -->
+        <p class="text-center mt-6 text-2xl sm:text-3xl text-gray-800">
+            <span class="font-semibold">Hi,</span> I'm
+            <span class="text-teal-600 font-bold">Nethmi Welgamvila</span>
+        </p>
+        <p class="text-gray-600 mt-2 text-base sm:text-lg">
+            Full-Stack Developer | Tech Enthusiast | Blogger
+        </p>
+
+        <!-- Social Links -->
+        <div class="flex justify-center mt-8">
+            <ul class="flex space-x-5">
+                <!-- GitHub -->
+                <li>
+                    <a href="https://github.com/nethmi2020" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <!-- LinkedIn -->
+                <li>
+                    <a href="https://www.linkedin.com/in/nethmi96/" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-700 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <!-- CodePen -->
+                <li>
+                    <a href="https://codepen.io/nethmicode2020" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-900 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-brands fa-codepen"></i>
+                    </a>
+                </li>
+                <!-- Medium -->
+                <li>
+                    <a href="https://medium.com/@nethmiwelgamvila" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-green-700 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-brands fa-medium"></i>
+                    </a>
+                </li>
+                <!-- Phone -->
+                <li>
+                    <a href="tel:+94716897175"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-700 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </li>
+                <!-- Email -->
+                <li>
+                    <a href="mailto:nethmiwelgamvila@gmail.com"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-red-600 text-white hover:bg-teal-500 transition duration-300 shadow-md">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
             </ul>
-            
         </div>
     </div>
+
     <!-- about -->
-   
-        <div class="container mx-auto mt-5  bg-blue-50 py-5 " id="about">
-            <div class="text-center  my-18">
-                <h2 class="text-5xl text-center text-light-grey my-4 ">About Me</h2>
-                <p class="text-center max-w-2xl mx-auto font-light">Software developer with over <span class="font-medium">four + year</span> of experience who is passionate about building scalable online applications. 
-                    Proficient in front-end and back-end development, 
-                    possessing knowledge of <sppan class="font-medium">HTML, CSS, Tailwind CSS, JavaScript, PHP, and PHP frameworks like Laravel and CodeIgniter</sppan> A track record of producing timely, high-quality code in agile settings. Searching for chances to work with creative teams and contribute to unique ideas. Currently open to opportunities, where I can leverage my technical expertise and collaborative mindset to drive impactful solutions.</p>
+
+    <div class="container mx-auto mt-10 bg-gradient-to-r from-blue-50 to-green-50 py-16 px-6 rounded-2xl shadow-md scroll-animate"
+        id="about">
+        <!-- Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-800 uppercase tracking-wider">
+                About Me
+            </h2>
+            <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Software developer with over
+                <span class="font-semibold text-green-600">4+ years</span> of
+                experience, passionate about building scalable web applications.
+                Skilled in
+                <span class="font-semibold text-green-700">HTML, CSS, Tailwind CSS, JavaScript, PHP, Laravel, and
+                    CodeIgniter</span>. Proven ability to deliver high-quality code in agile teams.
+                Currently open to new opportunities where I can contribute to
+                impactful solutions.
+            </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Profile Image -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+                <img src="images/nethmi-animated.png" alt="Profile of Nethmi"
+                    class="rounded-2xl shadow-lg w-80 lg:w-[420px] transition-transform duration-300 hover:scale-105"
+                    loading="lazy" />
             </div>
-          
-            <div class="flex flex-col lg:flex-row items-center mt-10">
-                <div class="w-full lg:w-5/12 px-5 lg:pl-3  lg:pb-0 items-center">
-                       <img class=" lg:pl-20 w-96 lg:w-[500px] h-auto " src="images/nethmi-animated.png" alt=""> 
-                      
-                </div>
-                <div class="w-full lg:w-7/12 px-5 lg:pl-3 flex flex-col justify-center ">
-                    <h2 class="font-light text-5xl my-3">Software Engineer</h2>
-                    <div class="flex flex-col lg:flex-row items-center">
-                        <div class="lg:w-1/2">
-                            <div class="col-sm-6 py-2 "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Name:</span> <span class="text-secondary">Nethmi</span></h6></div>
-                            <div class="col-sm-6 py-2 "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Birthday:</span> <span class="text-secondary ">1996-06-26</span></h6></div>
-                            <div class="col-sm-6 py-2 "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Experience:</span> <span class="text-secondary">3+ Years</span></h6></div>
-                            <div class="col-sm-6 py-2 "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Degree:</span> <span class="text-secondary">B.Sc (Honours) in Information System </span></h6></div>
-                            
+
+            <!-- Info Section -->
+            <div class="w-full lg:w-7/12 space-y-8">
+                <h3 class="text-3xl font-extrabold text-gray-800">Software Engineer</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Individual Info Cards -->
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-user text-lg"></i>
                         </div>
-                        <div class="lg:w-1/2">
-                            <div class="col-sm-6 py-2  "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Phone: </span><span class="text-secondary">0716897175</span></h6></div>
-                            <div class="col-sm-6 py-2  "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Email:</span> <span class="text-secondary">nethmiwelgamvila@gmail.com</span></h6></div>
-                            <div class="col-sm-6 py-2  "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Address:</span> <span class="text-secondary">Anuththra, Lindara,Mirigama</span></h6></div>
-                            <div class="col-sm-6 py-2  "><h6><i class="fa-solid fa-greater-than text-green-300"></i>&nbsp;&nbsp;&nbsp;<span class="font-medium">Freelance: </span><span class="text-secondary">Available</span></h6></div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Name</p>
+                            <p class="text-gray-600">Nethmi</p>
                         </div>
                     </div>
-                    Sabaragamuwa University of Sri Lanka-Department of Computing and Information System
-                    
-               </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-cake-candles text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Birthday</p>
+                            <p class="text-gray-600">1996-06-26</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Experience</p>
+                            <p class="text-gray-600">4+ Years</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-graduation-cap text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Degree</p>
+                            <p class="text-gray-600">B.Sc (Hons) in Information Systems</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Phone</p>
+                            <p class="text-gray-600">0716897175</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 w-full">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-gray-800">Email</p>
+                            <p class="text-gray-600 break-words">nethmiwelgamvila@gmail.com</p>
+                        </div>
+                                            </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-map-marker-alt text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Address</p>
+                            <p class="text-gray-600">Anuththra, Lindara, Mirigama</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition-transform duration-300 group-hover:scale-110">
+                            <i class="fa-solid fa-rocket text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Freelance</p>
+                            <p class="text-gray-600">Available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="pt-6 text-gray-600 italic text-center md:text-left">
+                    🎓 Graduated from
+                    <span class="font-semibold text-teal-600">Sabaragamuwa University of Sri Lanka</span>,
+                    Faculty of Computing, Department of Computing and Information Systems
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- qualiffications -->
+    <div class="container mx-auto my-16 px-5 scroll-animate" id="qualification">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold text-gray-900 uppercase tracking-wide">
+                Education & Experience
+            </h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg sm:text-xl">
+                Overview of my educational background and professional experience
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left Column -->
+            <div class="space-y-10">
+                <!-- Education Card -->
+                <div
+                    class="bg-white shadow-lg rounded-xl p-8 border-l-8 border-teal-500 relative hover:shadow-2xl transition duration-500">
+                    <div class="absolute -left-4 top-8 w-6 h-6 bg-teal-500 rounded-full border-2 border-white"></div>
+                    <h4 class="text-2xl sm:text-3xl font-semibold flex items-center gap-3 mb-2">
+                        <i class="fas fa-graduation-cap text-teal-500"></i> B.Sc (Honours)
+                        in Information Systems
+                    </h4>
+                    <span class="text-gray-500 font-medium mb-3 block text-lg">2017 – 2022</span>
+                    <em class="text-gray-600 block mb-3 text-lg">Sabaragamuwa University of Sri Lanka - Dept. of
+                        Computing &
+                        Information Systems</em>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Graduated with 2nd Upper Class, FGPA 3.32
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white shadow-lg rounded-xl p-8 border-l-8 border-teal-500 relative hover:shadow-2xl transition duration-500">
+                    <div class="absolute -left-4 top-8 w-6 h-6 bg-teal-500 rounded-full border-2 border-white"></div>
+                    <h4 class="text-2xl sm:text-3xl font-semibold flex items-center gap-3 mb-2">
+                        <i class="fas fa-file-alt text-teal-500"></i> GCE Advanced Level
+                    </h4>
+                    <span class="text-gray-500 font-medium mb-3 block text-lg">2013 – 2015</span>
+                    <em class="text-gray-600 block mb-3 text-lg">Bandaranayaka Central College, Veyangoda</em>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Mathematics-A, Physics-C, Chemistry-C
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white shadow-lg rounded-xl p-8 border-l-8 border-teal-500 relative hover:shadow-2xl transition duration-500">
+                    <div class="absolute -left-4 top-8 w-6 h-6 bg-teal-500 rounded-full border-2 border-white"></div>
+                    <h4 class="text-2xl sm:text-3xl font-semibold flex items-center gap-3 mb-2">
+                        <i class="fas fa-briefcase text-teal-500"></i> Associate Software
+                        Engineer
+                    </h4>
+                    <span class="text-gray-500 font-medium mb-3 block text-lg">11/2023 – Present</span>
+                    <em class="text-gray-600 block mb-3 text-lg">Lanka Communication Services (Pvt) Ltd.</em>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-lg leading-relaxed">
+                        <li>Document API endpoints for frontend collaboration</li>
+                        <li>Provide team support as needed</li>
+                        <li>Engaged in Laravel development for scalable apps</li>
+                        <li>Collaborated closely with clients</li>
+                        <li>Handled GitLab version control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-10">
+                <div
+                    class="bg-white shadow-lg rounded-xl p-8 border-l-8 border-teal-500 relative hover:shadow-2xl transition duration-500">
+                    <div class="absolute -left-4 top-8 w-6 h-6 bg-teal-500 rounded-full border-2 border-white"></div>
+                    <h4 class="text-2xl sm:text-3xl font-semibold flex items-center gap-3 mb-2">
+                        <i class="fas fa-briefcase text-teal-500"></i> Associate Software
+                        Engineer
+                    </h4>
+                    <span class="text-gray-500 font-medium mb-3 block text-lg">01/2023 – 11/2023</span>
+                    <em class="text-gray-600 block mb-3 text-lg">Evolve Technologies</em>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-lg leading-relaxed">
+                        <li>Engaged with clients to analyze their needs</li>
+                        <li>Handled Bitbucket version controlling</li>
+                        <li>Provided support to the team</li>
+                        <li>Enhanced CodeIgniter app functionalities</li>
+                        <li>Developed & maintained Laravel-React backend</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white shadow-lg rounded-xl p-8 border-l-8 border-teal-500 relative hover:shadow-2xl transition duration-500">
+                    <div class="absolute -left-4 top-8 w-6 h-6 bg-teal-500 rounded-full border-2 border-white"></div>
+                    <h4 class="text-2xl sm:text-3xl font-semibold flex items-center gap-3 mb-2">
+                        <i class="fas fa-briefcase text-teal-500"></i> Trainee PHP
+                        Developer (Internship)
+                    </h4>
+                    <span class="text-gray-500 font-medium mb-3 block text-lg">11/2020 – 08/2022</span>
+                    <em class="text-gray-600 block mb-3 text-lg">Ogilvy Martech Solution</em>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-lg leading-relaxed">
+                        <li>Engaged with clients to gather & analyze requirements</li>
+                        <li>Handled Bitbucket version control</li>
+                        <li>Developed apps using custom MVC PHP framework</li>
+                        <li>Supported WordPress-based applications</li>
+                        <li>
+                            Hands-on experience working with real-time client requirements
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-   
-   <!-- qualiffications -->
-
-    <div class="container mx-auto mt-5  " id="qualification">
-    <div class="text-center  my-18">
-        <h2 class="text-5xl text-center text-light-grey my-4 ">Education And Experience</h2>
-    </div>
-  
-    <div class="flex flex-col lg:flex-row items-center mt-10">
-        <div class="w-full lg:w-5/12 px-5 lg:pl-3  lg:pb-0 items-center">
-              
-            <div class="border-l-4 border-green-500 pt-2 pl-4 ml-2">
-                <h4 class="text-2xl font-normal mb-2"> <i class="fas fa-graduation-cap"></i>B.Sc (Honours) in Information System</h4>
-                <h3 class=" font-medium mb-2">2017 –2022</h3>
-                <em class="my-4"> Sabaragamuwa University of Sri Lanka-Department of Computing and Information System</em>
-                 <p class="my-4">Graduated with 2nd Upper with FGPA3.32</p>
-            </div>
-
-
-            <div class="border-l-4 border-green-500 pt-2 pl-4 ml-2">
-                <h4 class="text-2xl font-normal mb-2"> <i class="fas fa-file-alt"></i> GCE Advanced Level(2016) </h4>
-                <h3 class=" font-medium mb-2">2013 –2015</h3>
-                <em class="my-4">  Bandaranayaka Central College Veyangoda</em>
-                 <p class="my-4">Mathematics-A,Physic-C,Chemistry-C</p>
-            </div>
-
-            <div class="border-l-4 border-green-500 pt-2 pl-4 ml-2 mb-3">
-                <h4 class="text-2xl font-normal mb-2"> <i class="fas fa-briefcase"></i> Associate Software Engineer </h4>
-                <h3 class=" font-medium mb-2">11/2023 – present</h3>
-                <em class="my-4">  Lanka Communication Services (Pvt) Ltd.</em>
-                <ul>
-                    <li>*Document the API endpoints, request/response formats, and any other relevant information for future reference or collaboration with frontend developers</li>
-                    <li>*Provide supports for working team when they needs</li>
-                    <li>*Actively engaged in Laravel development, contributing to the creation and improvement of scalable web applications</li>
-                    <li>*Collaborating closely with clients to understand their needs and specifications</li>
-                    <li>*Handling GIT lab version control system</li>              
-                 </ul>
-            </div>
-
-        
-        </div>
-        <div class="w-full lg:w-7/12 px-5 lg:pl-3 flex flex-col justify-center ">
-            <!-- <h2 class="font-light text-5xl my-3">Professional Experience</h2> -->
-   
-            <div class="border-l-4 border-green-500 pt-2 pl-4 ml-2 mb-3">
-                <h4 class="text-2xl font-normal mb-2"> <i class="fas fa-briefcase"></i> Associate Software Engineer </h4>
-                <h3 class=" font-medium mb-2"> 01/2023 – 11/2023</h3>
-                <em class="my-4">  Evolve Technologies.</em>
-                <ul>
-                    <li>*Engaging with clients to gather and analyze their specific needs and expectations</li>
-                    <li>*Handling BIT Bucket version controlling</li>
-                    <li>*Provide supports for working team when they need</li>
-                    <li>*Enhancing the capabilities of a CodeIgniter application by implementing new functionalities and supporting existing ones.</li>
-                    <li>*Developing and maintaining the backend functionality of a Laravel-React REST API project</li>              
-                 </ul>
-            </div>
-
-            <div class="border-l-4 border-green-500 pt-2 pl-4 ml-2 mb-3">
-                <h4 class="text-2xl font-normal mb-2"> <i class="fas fa-briefcase"></i> Trainee PHP Developer(Internship) </h4>
-                <h3 class=" font-medium mb-2">  11/2020 – 08/2022</h3>
-                <em class="my-4">  Ogilvy Martech Solution</em>
-                 <ul>
-                    <li>*Engaging with clients to gather and analyze their specific needs and expectations</li>
-                    <li> *Handling BIT Bucket version controlling</li>
-                    <li>*Provide supports for working team when they need</li>
-                    <li> *Developing applications using a custom PHP framework based on the MVC architecture</li>
-                    <li> *Supporting applications built on a WordPress</li>
-                    <li> *hands-on experience working directly with real-time clients, understanding their needs, and translating their requirements into actionable solution</li>
-                                      
-                 </ul>
-            </div>
-
-        
-            
-            
-       </div>
-    </div>
     </div>
 
     <!-- skills -->
-     <div class="conatiner mx-auto mt-5 bg-blue-50 pb-5 " id="skills">
-        <div class="text-center  my-18">
-            <h2 class="text-5xl text-center text-light-grey my-4 ">Skills</h2>
+    <div class="container mx-auto mt-16 py-12 px-5 scroll-animate" id="skills">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold text-gray-800 uppercase tracking-wide">
+                Skills
+            </h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg sm:text-xl">
+                A showcase of my technical skills and expertise
+            </p>
         </div>
-        <div class="flex flex-col lg:flex-row items-center mt-10 gap-35">
-            <div class="w-full lg:w-1/2 justify-center px-5 lg:pl-12">
 
-                <!-- skill-1 -->
-                 <h4 class="font-light">HTML5</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2  mb-3">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2"></div>
-                 </div>                
-                 <h4 class="font-light">JS</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
-                 </div>
-                 <h4 class="font-light mt-3">SQL</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
-                 </div>           
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Left Column -->
+            <div class="space-y-6">
+                <!-- HTML5 -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">HTML5</h4>
+                        <span class="text-gray-700 font-medium">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500"
+                            style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">JavaScript</h4>
+                        <span class="text-gray-700 font-medium">65%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400"
+                            style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <!-- SQL -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">SQL</h4>
+                        <span class="text-gray-700 font-medium">60%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-green-400 via-green-500 to-green-600"
+                            style="width: 60%"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="w-full lg:w-1/2 px-5 justify-center lg:pr-12">
-                <!-- skill-1 -->
-                 <h4 class="font-light mt-3">CSS3</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-5"></div>
-                 </div>
+            <!-- Right Column -->
+            <div class="space-y-6">
+                <!-- CSS3 -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">CSS3</h4>
+                        <span class="text-gray-700 font-medium">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-500"
+                            style="width: 75%"></div>
+                    </div>
+                </div>
 
-                 <h4 class="font-light mt-3">Tailwind CSS</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2 "></div>
-                 </div>
+                <!-- Tailwind CSS -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">Tailwind CSS</h4>
+                        <span class="text-gray-700 font-medium">65%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400"
+                            style="width: 65%"></div>
+                    </div>
+                </div>
 
-                 <h4 class="font-light mt-3">Version Control</h4>
-                 <div class="w-full bg-gray-400 rounded-full h-2">
-                    <div class="w-2/4 bg-green-300 rounded-full h-2 mb-3"></div>
-                 </div>
-           
+                <!-- Version Control -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <h4 class="text-lg font-semibold text-gray-800">
+                            Version Control
+                        </h4>
+                        <span class="text-gray-700 font-medium">60%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="h-4 rounded-full bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600"
+                            style="width: 60%"></div>
+                    </div>
+                </div>
             </div>
         </div>
-     </div>
+    </div>
 
-
-      <!-- Portfolio -->
-      <div class="conatiner mx-auto mt-5" id="portfolio">
-        <div class="text-center ">
-            <h2 class="text-5xl text-center text-light-grey my-4 ">Portfolio</h2>
-        </div>
-        <div class="flex flex-col lg:flex-row items-center mt-10 gap-10">
-            <ul class="flex flex-row gap-5 items-center mx-auto font-medium" id="filterButtons">
-                <!-- <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="all">All</li> -->
-                <!-- <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="php">PHP</li> -->
-                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="laravel">Laravel</li>
-                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="codeigniter">CodeIgniter</li>
-                <li class="hover:text-green-300 hover:cursor-pointer transition ease-in-out" data-filter="frontend">Frontend</li>
-            </ul>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ml-15 mt-8" id="portfolioItems">
-           
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
-                   
-                        <a href="https://github.com/nethmi2020/my_portfolio">
-                            <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                                <img src="images/portfolio.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                                My Portfolio
-                                <p class="px-3 absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                    This is personal portfolio, built with Laravel, It has a full control panel to control content.
-                                    <span class="font-thin mt-2 text-base text-center mx-2">My Portfolio </span>
-                                </p>
-                            </div>
-                        </a>
-                             
-                  </div>
-
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
-                        <a href="#">
-                            <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                                <img src="images/MOL.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                                MOL Logistic System
-                                <p class="px-3 absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                    Used to maintain logistic operation of logistic company
-                                    <span class="font-thin mt-2 text-base text-center mx-2">MOL Logistic System </span>
-                                </p>
-                            </div>
-                        </a>
-                        
-                </div>
-
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
-                
-                        <a href="http://git.lankapanel.net/root/lankacom-billing-portal">
-                            <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                                <img src="images/customer-billing.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                                Customer Billing Portal
-                                <p class="px-3 absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                    Customer Billing Portal to manage due incoices of customers
-                                    <span class="font-thin mt-2 text-base text-center mx-2">Customer Billing Portal</span>
-                                </p>
-                            </div>
-                        </a>
-                    
-                </div>
-
-      
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="laravel">
-                   
-                    <a href="https://github.com/nethmi2020/Multi-Vendor-Ecommerce-Site">
-                        <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                            <img src="images/ecommerce.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                            E commerce Site
-                            <p class="px-3 absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                A full-featured eCommerce website built with Laravel. The site includes product management, cart functionality, and secure user authentication.
-                                <span class="font-thin mt-2 text-base text-center mx-2">E commerce Site</span>
-                            </p>
-                        </div>
-                    </a>
-                        
-                </div>
-
-
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="frontend">
-                    
-                    <a href="https://github.com/nethmi2020/my_portfolio">
-                        <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                            <img src="images/portfolio.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                            Tailwind CSS Portfolio
-                            <p class="px-3 absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                               Personal portfolio built as static site using Tailwind CSS
-                                <span class="font-thin mt-2 text-base text-center mx-2">Tailwind CSS Portfolio</span>
-                            </p>
-                        </div>
-                    </a>
-                            
-                </div>
-
-                <div class="transition-all duration-500 opacity-100 project_category" data-category="frontend">
-                   
-                    <a href="https://github.com/nethmi2020/youtube_landing_page">
-                        <div class= " relative    px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                            <img src="images/youtube.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                            YouTube Landing Page
-                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                YouTube Landing Page
-                                <span class="font-thin mt-2 text-base text-center mx-2">YouTube Landing Page</span>
-                            </p>
-                        </div>
-                    </a>
-                          
-                 </div>
-
-                 <div class="transition-all duration-500 opacity-100 project_category" data-category="codeigniter">
-               
-                    <a href="#">
-                        <div class= " relative   px-3 py-2 hover:cursor-pointer group   transition ease-in-out">
-                            <img src="images/ecommerce.png" class="w-full h-auto object-cover rounded mb-2" alt="">
-                            Point Of Sale System
-                            <p class="absolute inset-0 flex  flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:rounded-sm">
-                                Point Of Sale System
-                                <span class="font-thin mt-2 text-base text-center mx-2"> Point Of Sale System</span>
-                            </p>
-                        </div>
-                    </a>
-               
-                </div>
-            
-            </div>
-            
-            
-             
-           
-     </div>
-
-     <!-- contacts -->
-      <div class="container mx-auto my-5 " id="contact">
-        <div class="text-center  my-18">
-            <h2 class="text-5xl text-center text-light-grey my-4 ">Contact Us</h2>
+    <!-- Portfolio -->
+    <div class="container mx-auto mt-16 px-5 py-12 scroll-animate" id="portfolio">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold text-gray-800 uppercase tracking-wide">
+                Portfolio
+            </h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg sm:text-xl">
+                Some of my projects, showcasing my skills and experience
+            </p>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center mt-5 gap-3">
-            <div class="w-full lg:w-1/3 px-5 justify-center lg:px-8">
-                <ul >
-                    <li class="mb-5">
-                        <div class="flex item-start space-x-4">
-                            <i class="far fa-address-card text-3xl hover:text-green-300" ></i>
-                            <div class="">
-                                <p class="font-semibold hover:text-green-300">Address</p>
-                                <p class="text-base hover:text-green-300">Anuththara, Lindara, Mirirgama</p>
-                            </div>
-                            
+        <!-- Filter Buttons -->
+        <!-- <div class="flex justify-center mb-10">
+    <ul class="flex flex-wrap gap-6 font-medium" id="filterButtons">
+      <li class="px-4 py-2 rounded-full border border-gray-300 hover:bg-green-300 hover:text-white cursor-pointer transition duration-300" data-filter="laravel">Laravel</li>
+      <li class="px-4 py-2 rounded-full border border-gray-300 hover:bg-green-300 hover:text-white cursor-pointer transition duration-300" data-filter="codeigniter">CodeIgniter</li>
+      <li class="px-4 py-2 rounded-full border border-gray-300 hover:bg-green-300 hover:text-white cursor-pointer transition duration-300" data-filter="frontend">Frontend</li>
+    </ul>
+  </div> -->
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Portfolio Item -->
+
+            <a href="https://github.com/nethmi2020/my_portfolio" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="laravel">
+                <img src="images/portfolio.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="My Portfolio" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">Portfolio CMS</h4>
+                    <p class="text-gray-200 text-sm">
+                        A Laravel-based content management system designed for managing
+                        and updating personal portfolio projects with ease. Includes a
+                        secure admin dashboard for full control over content and media.
+                    </p>
+                </div>
+            </a>
+
+            <a href="" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="laravel">
+                <img src="images/MOL.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="MOL Logistic System" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">
+                        MOL Logistic System
+                    </h4>
+                    <p class="text-gray-200 text-sm">
+                        Logistics management system built with Laravel 8, featuring a REST API, JWT-based admin
+                        authentication, and a React frontend consuming the Laravel API.
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://github.com/nethmi2020/customer-billing-portal" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="laravel">
+                <img src="images/customer-support-portal.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Customer Billing Portal" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">
+                        Customer Billing Portal
+                    </h4>
+                    <p class="text-gray-200 text-sm">
+                        Customer Billing Portal built with Laravel 11, using Spatie for role management and Laravel
+                        Breeze for simple, customizable authentication.
+                        Customers can log in to view their outstanding invoices, while administrators can efficiently
+                        manage customer service requests.
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://github.com/nethmi2020/Multi-Vendor-Ecommerce-Site" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="laravel">
+                <img src="images/ecommerce.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="E-commerce Site" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">
+                        E-commerce Site
+                    </h4>
+                    <p class="text-gray-200 text-sm">
+                        Full-featured eCommerce website built with Laravel, using Spatie for role management and Laravel
+                        Breeze for authentication.
+                        Includes email notifications for orders, user registration, and other system events.
+                    </p>
+
+                </div>
+            </a>
+
+            <!-- Frontend Projects -->
+            <a href="https://nethmi2020.github.io/portfolio/" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="frontend">
+                <img src="images/personal-portfolio-ui.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Tailwind CSS Portfolio" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">
+                        Tailwind CSS Portfolio
+                    </h4>
+                    <p class="text-gray-200 text-sm">
+                        Personal portfolio website built with Tailwind CSS, showcasing
+                        projects and personal branding with a modern UI.
+                    </p>
+                </div>
+            </a>
+
+            <a href="http://mis.lankacom.net/" target="_blank"
+                class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+                data-category="frontend">
+                <img src="images/MIS.png"
+                    class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Tailwind CSS Portfolio" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+                    <h4 class="text-white text-lg font-semibold mb-2">
+                        Management Information System
+                    </h4>
+                    <p class="text-gray-200 text-sm">
+                        Internal system for Lanka Communication Company, developed and
+                        maintained using CodeIgniter. Includes new feature developments
+                        and ongoing system enhancements.
+                    </p>
+                </div>
+            </a>
+            <!-- <div
+          class="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-500 project_category"
+          data-category="frontend"
+        >
+          <img
+            src="images/youtube.png"
+            class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+            alt="YouTube Landing Page"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300"
+          >
+            <h4 class="text-white text-lg font-semibold mb-2">
+              YouTube Landing Page
+            </h4>
+            <p class="text-gray-200 text-sm">
+              Responsive YouTube landing page built with HTML, CSS, and JS.
+            </p>
+          </div>
+        </div> -->
+
+            <!-- CodeIgniter Project -->
+
+        </div>
+    </div>
+    </div>
+
+    <!-- contacts -->
+    <div class="container mx-auto my-16 px-5 scroll-animate" id="contact">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold text-gray-800 uppercase tracking-wide">
+                Contact Me
+            </h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg sm:text-xl">
+                Get in touch for projects, collaborations, or just a friendly hello.
+            </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-10">
+            <!-- Contact Info -->
+            <div class="w-full lg:w-1/3 space-y-8">
+                <ul class="space-y-6">
+                    <!-- Address -->
+                    <li class="flex gap-4 items-start group">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition duration-300 group-hover:bg-teal-600 group-hover:text-white group-hover:scale-110">
+                            <i class="far fa-address-card text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Address</p>
+                            <p class="text-gray-600">Anuththara, Lindara, Mirigama</p>
                         </div>
                     </li>
-                    <li class="mb-5">
-                        <div class="flex item-start space-x-4">
-                            <i class="fas fa-phone-alt text-3xl hover:text-green-300"></i>
-                            <div class="">
-                                <p class="font-semibold hover:text-green-300">Contact Number</p>
-                                <p class="text-base hover:text-green-300" ><a href="tel:+94716897175">+94 71 689 7175</a></p>
-                            </div>
-                            
+
+                    <!-- Phone -->
+                    <li class="flex gap-4 items-start group">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition duration-300 group-hover:bg-teal-600 group-hover:text-white group-hover:scale-110">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Contact Number</p>
+                            <a href="tel:+94716897175" class="text-gray-600 hover:text-teal-600 transition">+94 71 689
+                                7175</a>
                         </div>
                     </li>
-                    <li class="mb-5">
-                        <div class="flex item-start space-x-4">
-                            <i class="fas fa-mail-bulk text-3xl hover:text-green-300"></i>
-                            <div class="">
-                                <p class="font-semibold hover:text-green-300">Email Address</p>
-                                <p class="text-base hover:text-green-300" ><a href="mailto:nethmiwelgamvila@gmail.com" target="_blank" class="hover:text-green-300">nethmiwelgamvila@gmail.com</a></p>
-                            </div>
-                            
+
+                    <!-- Email -->
+                    <li class="flex gap-4 items-start group">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition duration-300 group-hover:bg-teal-600 group-hover:text-white group-hover:scale-110">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Email Address</p>
+                            <a href="mailto:nethmiwelgamvila@gmail.com" target="_blank"
+                                class="text-gray-600 hover:text-teal-600 transition">
+                                nethmiwelgamvila@gmail.com
+                            </a>
                         </div>
                     </li>
-                    <li class="mb-5">
-                        <div class="flex item-start space-x-4">
-                            <i class="fa fa-linkedin text-3xl hover:text-green-300"></i>
-                            <div class="">
-                                <p class="font-semibold hover:text-green-300">LinkedIn</p>
-                                <a href="https://www.linkedin.com/in/nethmi96/" target="_blank" class="hover:text-green-300">Nethmi Welgamvila</a>
-                            </div>
-                            
+
+                    <!-- LinkedIn -->
+                    <li class="flex gap-4 items-start group">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-100 text-teal-600 shadow-md transition duration-300 group-hover:bg-teal-600 group-hover:text-white group-hover:scale-110">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/nethmi96/" target="_blank"
+                                class="text-gray-600 hover:text-teal-600 transition">
+                                Nethmi Welgamvila
+                            </a>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="w-full lg:w-2/3 px-5 justify-center lg:px-8">
-                <form action="">
-                    <div class="flex flex-row gap-2 my-3">
-                        <input type="text" placeholder="Name" class="w-1/2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-                        <input type="email" placeholder="Email" class="w-1/2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+            <!-- Contact Form -->
+            <div class="w-full lg:w-2/3 bg-white shadow-lg rounded-xl p-8">
+                <form action="" class="space-y-4">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="text" placeholder="Name"
+                            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                            value="Nethmi Welgamvila" />
+                        <input type="email" placeholder="Email"
+                            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition"
+                            value="nethmiwelgamvila@gmail.com" />
                     </div>
-                    <input type="text" placeholder="Subject"  class="my-3 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-                    <textarea rows="5" id="" value="message"  class="my-3 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-                    <div class="flex justify-center mt-4">
-                        <button class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
-                          Send Message
+                    <input type="text" placeholder="Subject"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition" />
+                    <textarea rows="5" placeholder="Message"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition"></textarea>
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition duration-300">
+                            Send Message
                         </button>
-                      </div>
+                    </div>
                 </form>
             </div>
         </div>
-
-      </div>
+    </div>
 
     <!-- footer -->
-     <div  class="container mx-auto mt-15 bg-blue-50 p-10" >
-        <p class="text-center text-sm my-8 text-gray-600"> &copy; 2025 Nethmi Welgamvila. All rights reserved.</p>
-        <ul class="flex flex-row gap-8 justify-center">
-            <li><a href="https://github.com/nethmi2020" class="font-medium  hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/nethmi96/" class="font-medium hover:text-green-300  text-3xl  transition ease-in-out"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="https://codepen.io/nethmicode2020" class="font-medium hover:text-green-300   text-3xl transition ease-in-out"><i class="fa-brands fa-codepen"></i></a></li>
-            <li><a href="https://medium.com/@nethmiwelgamvila" class="font-medium hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-brands fa-medium"></i></a></li>
-            <li><a href="tel:+94716897175" class="font-medium hover:text-green-300 text-3xl transition ease-in-out"><i class="fa-solid fa-phone"></i></a></li>
-            <li><a href="mailto:nethmiwelgamvila@gmail.com" class="font-medium hover:text-green-300  text-3xl transition ease-in-out"><i class="fa-solid fa-envelope"></i></a></li>
+    <div class="container mx-auto mt-16 bg-blue-50 py-10 px-5">
+        <!-- Copyright -->
+        <p class="text-center text-sm text-gray-500 mb-6">
+            &copy; 2025 Nethmi Welgamvila. All rights reserved.
+        </p>
+
+        <!-- Social Links -->
+        <ul class="flex flex-wrap justify-center gap-6 mb-6">
+            <li>
+                <a href="https://github.com/nethmi2020" target="_blank"
+                    class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/nethmi96/" target="_blank"
+                    class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/nethmicode2020" target="_blank"
+                    class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-brands fa-codepen"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://medium.com/@nethmiwelgamvila" target="_blank"
+                    class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-brands fa-medium"></i>
+                </a>
+            </li>
+            <li>
+                <a href="tel:+94716897175" class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:nethmiwelgamvila@gmail.com"
+                    class="text-gray-700 hover:text-green-400 text-3xl transition duration-300">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
         </ul>
-        <p class="text-center my-8 text-sm text-gray-600">
-            Designed & developed with 💻 by Nethmi Welgamvila
-          </p>
-     </div>
-  </body>
-  <script>
-    const filterButtons=document.querySelectorAll('#filterButtons li');
-    const portfolioItems=document.querySelectorAll('#portfolioItems .project_category');
 
-    filterButtons.forEach(button=>{
-        button.addEventListener('click',()=>{
-            const filter=button.getAttribute('data-filter');
+        <!-- Footer Note -->
+        <p class="text-center text-sm text-gray-500">
+            Designed & developed with <span class="text-red-500">💻</span> by Nethmi
+            Welgamvila
+        </p>
+    </div>
+</body>
+<script>
+    const filterButtons = document.querySelectorAll("#filterButtons li");
+    const portfolioItems = document.querySelectorAll(
+        "#portfolioItems .project_category"
+    );
 
-            filterButtons.forEach(btn=>btn.classList.remove('text-green-400','font-bold'))
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
 
-            button.classList.add('text-green-400','font-bold')
+            filterButtons.forEach((btn) =>
+                btn.classList.remove("text-green-400", "font-bold")
+            );
 
-            portfolioItems.forEach(item =>{
-                const itemCategory=item.getAttribute('data-category');
+            button.classList.add("text-green-400", "font-bold");
 
-           
-                
-                if(filter==='all' || filter===itemCategory){
-                    item.classList.remove('hidden');
+            portfolioItems.forEach((item) => {
+                const itemCategory = item.getAttribute("data-category");
+
+                if (filter === "all" || filter === itemCategory) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
                 }
-                else{
-                    item.classList.add('hidden');
-                }
-            })
-        })
-    })
-
-  // add shadow to navbar when scrolling
-    window.addEventListener('scroll', function () 
-        {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 10) {
-            navbar.classList.add('shadow-lg', 'bg-white');
-        } else {
-            navbar.classList.remove('shadow-md');
-        }
+            });
         });
+    });
+
+    // add shadow to navbar when scrolling
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 10) {
+            navbar.classList.add("shadow-lg", "bg-white");
+        } else {
+            navbar.classList.remove("shadow-md");
+        }
+    });
 
     //make cliked nav link active
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("div[id]");
+        const navLinks = document.querySelectorAll("nav ul li a");
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("div[id]"); 
-    const navLinks = document.querySelectorAll("nav ul li a");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const id = entry.target.getAttribute("id");
+                    const link = document.querySelector(`nav ul li a[href="#${id}"]`);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute("id");
-          const link = document.querySelector(`nav ul li a[href="#${id}"]`);
+                    if (entry.isIntersecting) {
+                        navLinks.forEach((el) => el.classList.remove("text-green-500"));
+                        if (link) link.classList.add("text-green-500");
+                    }
+                });
+            },
+            { threshold: 0.6 }
+        );
 
-          if (entry.isIntersecting) {
-            navLinks.forEach((el) => el.classList.remove("text-green-500"));
-            if (link) link.classList.add("text-green-500");
-          }
+        sections.forEach((section) => {
+            observer.observe(section);
         });
-      },
-      { threshold: 0.6 }
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
     });
-  });
+    const scrollElements = document.querySelectorAll('.scroll-animate');
 
-//   document.getElementById("menu-toggle").addEventListener("click", function () {
-//     const navLinks = document.getElementById("nav-links");
-//     navLinks.classList.toggle("hidden");
-//   });
-  </script>
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('active');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('active');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            }
+            // optional else to hide when scrolling up
+            // else {
+            //   hideScrollElement(el);
+            // }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // trigger on page load for elements already in view
+    handleScrollAnimation();
+    //   document.getElementById("menu-toggle").addEventListener("click", function () {
+    //     const navLinks = document.getElementById("nav-links");
+    //     navLinks.classList.toggle("hidden");
+    //   });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // animation duration in ms
+        easing: 'ease-in-out',
+        once: true, // animation happens only once while scrolling down
+        mirror: false // whether elements should animate out while scrolling past them
+    });
+</script>
+
 </html>
